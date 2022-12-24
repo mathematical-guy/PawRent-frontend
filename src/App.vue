@@ -1,10 +1,10 @@
 <template>
   <v-app>
     <v-app-bar app color="primary" dark>
-      <v-btn class="py-7" color="primary" >
-          <v-icon x-large class="mr-4">mdi-paw</v-icon>
-          <h1>Paw Rent</h1>
-      </v-btn>
+      <v-row @click="refreshPage">
+        <v-icon  x-large class="mr-4">mdi-paw</v-icon>
+        <h1>Paw Rent</h1>
+      </v-row>
     </v-app-bar>
 
     <v-main>
@@ -30,6 +30,12 @@ export default {
     this.imagePath = "~/assets/paw_transparent.png";
     // this.imagePath = path.join('src', 'assets', 'paw_transparent.png')
     console.log(this.imagePath);
+  },
+  methods: {
+    refreshPage() {
+      window.location.reload();
+      console.log("clicked");
+    },
   },
 };
 </script>
